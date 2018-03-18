@@ -2,18 +2,19 @@ import React from 'react';
 import ImagesSinger from './imageSinger';
 import ListSongs from './listSongs';
 
-const AboutSinger = ({about, name, songs}) => (
+const AboutSinger = ({name, url, bio, canciones}) => (
   <div className="card col-12 col-md-8">
-    <ImagesSinger />
+    <ImagesSinger url={url}/>
     <div className="card-body">
       <h2 className="card-text">{name}</h2>
-      <p className="card-text">{about}</p>
-      <ul>{songs.map(listsong =>
-        <ListSongs
-          key={songs}
-          {...songs}
-        />
-      )}
+      <p className="card-text">{bio}</p>
+      <ul>
+        {canciones.map(canciones => (
+          <ListSongs 
+            key = {canciones}
+            canciones={canciones}
+          />
+        ))}
       </ul>
     </div>
   </div> 

@@ -1,7 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-import SingerApp from './componentes/singerApp';
+import Main from './main';
 
-ReactDOM.render(<SingerApp />, document.getElementById('root'));
+import { Provider } from 'react-redux';
+
+import store from './store';
+
+import './App.css';
+
+
+ReactDOM.render(      
+  <Provider store={store}>
+    <Main />
+  </Provider>, document.getElementById('root'));
 

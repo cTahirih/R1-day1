@@ -1,11 +1,15 @@
 import React from 'react';
 import ImagesSinger from './imageSinger';
 
-const ListSinger = ({name}) => (
+const ListSinger = ({dataList}) => (
   <div className="card mt-2 mb-2">
-    <ImagesSinger />
-    <div className="card-body">
-      <p className="card-text">{name}</p>
+    <div>
+      {dataList.map(list => (
+        <ImagesSinger
+          key={list.id}
+          {...list} 
+        />
+      ))}
     </div>
   </div>
 )

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ListSongs = ({songs}) => (
-  <li>{songs}</li>
+const ListSongs = ({canciones}) => (
+  <li>{canciones}</li>
 )
 
 export default ListSongs;
